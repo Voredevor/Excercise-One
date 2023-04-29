@@ -1,0 +1,492 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!-- Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&family=Passions+Conflict&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    <!-- jQuery Link -->
+    <script type="text/javascript" src="modules/jquery-3.6.2.min.js"></script>
+
+    <!--  Bootstrap Link  -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="index.css">
+
+
+    <title>Clarins Skincare Project</title>
+</head>
+<body>
+    <!-- The Header -->
+    <!-- /////////////////////////////////////// -->
+    <!-- /////////////////////////////////////// -->
+    <header>
+          <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="media/clariinsLogo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    CLARINS SKINCARE
+                  </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" id="header-home">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="header-contact">CONTACT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="header-about">ABOUT US</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">SEARCH</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+          
+        </header>
+        <!-- /////////////////////////////////////// -->
+        <!-- /////////////////////////////////////// -->
+        
+        <!-- GeoLocation Features -->
+    <section class="m-5" id="geoloc">
+      <article id="geo-info">
+        <button class="btn bg-gradient btn-outline-dark d-none" type="button" id="toggleWatchBtn">Start Watching</button>
+        <article class=" bg-gradient text-bg-dark rounded m-2 ps-2 pe-2" >
+            <!--Position information will be inserted here-->
+           <p id='date-time'></p> <p id="result"></p>
+        </article>
+
+      </article>
+    </section>
+
+    <!-- Visits counter -->
+    <section class="m-5" id="counter-1">
+      <article class="bg-gradient bg-light rounded w-auto" id="counter-info">
+        <p>Website visits:</p>
+          <p class="website-counter float-start me-2"></p>
+          <button class="btn bg-gradient btn-outline-dark float-start" id="reset">Reset</button>
+        
+      </article>
+    </section>
+    
+    
+    
+    <!-- The Main -->
+    <!-- /////////////////////////////////////// -->
+    <!-- /////////////////////////////////////// -->
+    <main>
+
+          <section class="portfolio" id="portfolio">
+
+              <!-- HEADLINE -->
+                <section>
+                  <div class="position-relative overflow-hidden text-center bg-light" id="headline-pg">
+                    <img src="media/headerImg.jpg" alt="">
+
+                      <div class="w-100 p-lg-5 mx-auto my-5 position-absolute top-50 start-50 translate-middle text-light text-bg-dark" >
+                          <h1 class="display-4 fw-bold">BEAUTY & CARE</h1>
+                          <p class="lead font-weight-normal">Nourish your skin with toxin-free cosmetic products. With the offers that you can’t refuse.</p>
+                          <a class="btn btn-outline-secondary" href="#">SHOP NOW</a>
+                      </div>
+                      <!-- <div class="product-device shadow-sm d-none d-md-block"></div>
+                      <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div> -->
+                  </div>
+                </section>
+          
+                <article class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12 pt-5" id="gallery-header">
+                  <p class="fs-1 text-center fw-bold text-success" id="write-T1">Cosmetics</pc>
+                  <h1 class="gallery-title text-dark">Trending Products</h1>
+                  <summary class="text-center">Nourish your skin with toxin-free cosmetic products. With the offers that you cannot refuse.</summary>
+                </article>
+          
+                <section align="center">
+                  <button class="filter-button" data-filter="all">All</button>
+                  <button class="filter-button" data-filter="category1">Face</button>
+                  <button class="filter-button" data-filter="category2">Body</button>
+                  <button class="filter-button" data-filter="category3">Hair</button>
+                  <button class="filter-button" data-filter="category4">Sunscreen</button>
+                  <button class="filter-button" data-filter="category5">Make Up</button>
+                  <button class="filter-button" data-filter="category6">Perfumes</button>
+                </section>
+                
+                <br/>
+
+                <section class="row ms-3 popup">  <!-- Category 1 Face-->
+                      <div class="col rounded-3 mb-4  filter gallery_product category1">
+                        
+                            <img id="popup-img" class="img-responsive rounded-2" alt="" src="media/face/face1.jpg" width="400" height="250"/>
+                            <div class='ms-4 w-75 img-info'>
+                              <h4>Foundation BeShop</h4>
+                                  <p> <s>$300</s> $200</p>
+                                  <button class="btn btn-outline-light" id="add-to-cart-btn">Add to cart</button>
+                            </div>
+                        
+                    </div>
+        
+                    <div class="gallery_product col rounded-3 mb-4 filter category1">
+                        
+                            <img class="img-responsive rounded-2 " alt="" src="media/face/face2.png" width="400" height="250"/>
+                            <div class='ms-4 w-75 img-info'>
+                                <h4>Eucerin Mask</h4>
+                                <p> <s>$150</s> $129.50</p>
+                                <button class="btn btn-outline-light" id="add-to-cart-btn">Add to cart</button>
+                            </div>
+                          
+                    </div>
+        
+                    <div class="gallery_product col rounded-3 mb-4 filter category1">
+                        
+                            <img class="img-responsive rounded-2" alt="" src="media/face/face3.jpg" width="400" height="250" />
+                            <div class='ms-4 w-75 img-info'>
+                                <h4>Lotion for Cleansing</h4>
+                                <p> <s>$250</s> $199.99</p>
+                                <button class="btn btn-outline-light" id="add-to-cart-btn">Add to cart</button>
+                            </div>
+                        
+                    </div>
+                </section>
+
+                <section class="row ms-3 popup">  <!-- Category 2 Body-->
+                      <div class="gallery_product col rounded-3 mb-4 me-3 filter category2">
+                       
+                            <img class="img-responsive rounded-2" alt="" src="media/body/body1.jpg" width="400" height="250" />
+                            <div class='ms-4 w-75 img-info'>
+                              <h4>Botanical Sugar Scrub</h4>
+                              <p> <s>$450</s> $300</p>
+                              <button class="btn btn-outline-light" id="add-to-cart-btn">Add to cart</button>
+                            </div>
+                        
+                    </div>
+        
+                    <div class="gallery_product col rounded-3 mb-4 me-3 filter category2">
+                       
+                            <img class="img-responsive rounded-2" alt="" src="media/body/body2.jpg" width="400" height="250" />
+                            <div class='ms-4 w-75 img-info'>
+                                <h4>Tarter Harper Nutrient Mix</h4>
+                                <p> <s>$300</s> $200</p>
+                                <button class="btn btn-outline-light" id="add-to-cart-btn">Add to cart</button>
+                            </div>
+                        
+                    </div>
+        
+                    <div class="gallery_product col rounded-3 mb-4 filter category2">
+                        
+                            <img class="img-responsive rounded-2" alt="" src="media/body/body3.jpg" width="400" height="250"/>
+                            <div class='ms-4 w-75 img-info'>
+                                <h4>Apple & Bears Body Wash</h4>
+                                <p> <s>$150</s> $139.99</p>
+                                <button class="btn btn-outline-light" id="add-to-cart-btn">Add to cart</button>
+                            </div>
+                        
+                    </div>
+                </section>
+
+                <section class="row ms-3 popup">  <!-- Category 3 Hair-->
+                      <div class="gallery_product col rounded-3 mb-4 me-3 filter category3">
+                        
+                            <img class="img-responsive rounded-2" alt="" src="media/hair/hair1.jpg" width="400" height="250"/>
+                            <div class='ms-4 w-75 img-info'>
+                              <h4>Pattern Scalp Serum</h4>
+                              <p> <s>$100</s> $95.99</p>
+                              <button class="btn btn-outline-light" id="add-to-cart-btn">Add to cart</button>
+                            </div>
+                        
+                    </div>
+        
+                    <div class="gallery_product col rounded-3 mb-4 me-3 filter category3">
+                       
+                            <img class="img-responsive rounded-2" alt="" src="media/hair/hair2.jpg"  width="400" height="250"/>
+                            <div class='ms-4 w-75 img-info'>
+                                <h4>Tropic Isle - Natural Hair Growth</h4>
+                                <p> <s>$200</s> $180.99</p>
+                                <button class="btn btn-outline-light" id="add-to-cart-btn">Add to cart</button>
+                            </div>
+                          
+                    </div>
+        
+                    <div class="gallery_product col rounded-3 mb-4 filter category3">
+                       
+                            <img class="img-responsive rounded-2" alt="" src="media/hair/hair3.jpg" width="400" height="250" />
+                            <div class='ms-4 w-75 img-info'>
+                                <h4>Carol's Daughter</h4>
+                                <p> <s>$300</s> $298.99</p>
+                                <button class="btn btn-outline-light" id="add-to-cart-btn">Add to cart</button>
+                            </div>
+                        
+                    </div>
+                </section>
+
+                <section class="row ms-3 popup">  <!-- Category 4 Sunscreen-->
+                      <div class="gallery_product col rounded-3 mb-4 me-3 filter category4">
+                        
+                            <img class="img-responsive rounded-2" alt="" src="media/sunscreen/sunscreen1.jpg" width="400" height="250" />
+                            <div class='ms-4 w-75 img-info'>
+                              <h4>Nutrogenar</h4>
+                              <p> <s>$250</s> $200</p>
+                              <button class="btn btn-outline-light" id="add-to-cart-btn">Add to cart</button>
+                            </div>
+                        
+                    </div>
+        
+                    <div class="gallery_product col rounded-3 mb-4 me-3 filter category4">
+                        
+                            <img class="img-responsive rounded-2" alt="" src="media/sunscreen/suncreen2.jpg" width="400" height="250" />
+                            <div class='ms-4 w-75 img-info'>
+                                <h4>Ultra High Sunlock</h4>
+                                <p> <s>$300</s> $285.99</p>
+                                <button class="btn btn-outline-light" id="add-to-cart-btn">Add to cart</button>
+                            </div>
+                         
+                    </div>
+        
+                    <div class="gallery_product col rounded-3 mb-4 filter category4">
+                        
+                            <img class="img-responsive rounded-2" alt="" src="media/sunscreen/suncreen3.jpg" width="400" height="250" />
+                            <div class='ms-4 w-75 img-info'>
+                                <h4>Bare Republic</h4>
+                                <p> <s>$230</s> $297.99</p>
+                                <button class="btn btn-outline-light" id="add-to-cart-btn">Add to cart</button>
+                            </div>
+                       
+                    </div>
+                </section>
+
+                <section class="row ms-3 popup">  <!-- Category 5 Make Up-->
+                      <div class="gallery_product col rounded-3 mb-4 me-3 filter category5">
+                        
+                            <img class="img-responsive rounded-2" alt="" src="media/makeup/makeup1.jpg" width="400" height="250"/>
+                            <div class='ms-4 w-75 img-info'>
+                              <h4>Jones Road</h4>
+                              <p> <s>$250</s> $199.99</p>
+                              <button class="btn btn-outline-light" id="add-to-cart-btn">Add to cart</button>
+                            </div>
+                      
+                    </div>
+        
+                    <div class="gallery_product col rounded-3 mb-4 me-3 filter category5">
+                        
+                            <img class="img-responsive rounded-2" alt="" src="media/makeup/makeup2.jpg" width="400" height="250" />
+                            <div class='ms-4 w-75 img-info'>
+                                <h4>Rimmel</h4>
+                                <p> <s>$200</s> $187.99</p>
+                                <button class="btn btn-outline-light" id="add-to-cart-btn">Add to cart</button>
+                            </div>
+                        
+                    </div>
+        
+                    <div class="gallery_product col rounded-3 mb-4 filter category5">
+                        
+                            <img class="img-responsive rounded-2" alt="" src="media/makeup/makeup3.jpg" width="400" height="250" />
+                            <div class='ms-4 w-75 img-info'>
+                                <h4>Mary Kay</h4>
+                                <p> <s>$400</s> $350.99</p>
+                                <button class="btn btn-outline-light" id="add-to-cart-btn">Add to cart</button>
+                            </div>
+                        
+                    </div>
+                </section>
+
+                <section class="row ms-3 popup">  <!-- Category 6 perfumes-->
+                      <div class="gallery_product col rounded-3 mb-4 me-3 filter category6">
+                        
+                            <img class="img-responsive rounded-2" alt="" src="media/perfumes/perfume1.jpg" width="400" height="250" />
+                            <div class='ms-4 w-75 img-info'>
+                              <h4>Thurath</h4>
+                              <p> <s>$350</s> $310</p>
+                              <button class="btn btn-outline-light" id="add-to-cart-btn">Add to cart</button>
+                            </div>
+                        
+                    </div>
+        
+                    <div class="gallery_product col rounded-3 mb-4 me-3 filter category6">
+                        
+                            <img class="img-responsive rounded-2" alt="" src="media/perfumes/perfume2.jpg" width="400" height="250" />
+                            <div class='ms-4 w-75 img-info'>
+                                <h4>Signature</h4>
+                                <p> <s>$500</s> $490.99</p>
+                                <button class="btn btn-outline-light" id="add-to-cart-btn">Add to cart</button>
+                            </div>
+                          
+                    </div>
+        
+                    <div class="gallery_product col rounded-3 mb-4 filter category6">
+                        
+                            <img class="img-responsive rounded-2" alt="" src="media/perfumes/perf3.jpg" width="400" height="250" />
+                            <div class='ms-4 w-75 img-info'>
+                                <h4>Orchid</h4>
+                                <p> <s>$450</s> $400</p>
+                                <button class="btn btn-outline-light" id="add-to-cart-btn">Add to cart</button>
+                            </div>
+                        
+                    </div>
+                </section>
+
+                <!-- Image popper -->
+              
+                <section class="show">
+                  <div class="overlay"></div>
+                  <div class="img-show">
+                    <span class="img-show-span">X</span>
+                    <img src="">
+                  </div>
+                </section>
+
+          </section>
+
+        <!-- Contact us Form -->
+        <section id="contact-us-form">
+          
+          <section id="contact">
+    
+            <h1 class="section-header">Contact</h1>
+            
+            <div class="contact-wrapper">
+            
+            <!-- Left contact page --> 
+              
+              <form id="contact-form" class="form-horizontal" role="form">
+                 
+                <div class="form-group">
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+                  </div>
+                </div>
+          
+                <div class="form-group">
+                  <div class="col-sm-12">
+                    <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+                  </div>
+                </div>
+          
+                <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+                
+                <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                  <div class="alt-send-button">
+                    <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+                  </div>
+                
+                </button>
+                
+              </form>
+              
+            <!-- Left contact page --> 
+              
+                <div class="direct-contact-container">
+          
+                  <ul class="contact-list">
+                    <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Lagos, Nigeria</span></i></li>
+                    
+                    <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(234) 555-2368</a></span></i></li>
+                    
+                    <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">clarence@gmail.com</a></span></i></li>
+                    
+                  </ul>
+          
+                  <hr>
+                  <!-- <ul class="social-media-list">
+                    <li><a href="#" target="_blank" class="contact-icon">
+                      <i class="fa fa-guitar" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="#" target="_blank" class="contact-icon">
+                      <i class="bi bi-facebook" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="#" target="_blank" class="contact-icon">
+                      <i class="bi bi-twitter" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="#" target="_blank" class="contact-icon">
+                      <i class="bi bi-instagram" aria-hidden="true"></i></a>
+                    </li>       
+                  </ul> -->
+                  <hr>
+          
+                  <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+          
+                </div>
+              
+            </div>
+            
+          </section>  
+
+        </section>
+        <!-- Contact Form End -->
+
+        <!-- About us Page  -->
+        <section class="about-us-page">
+            <section>
+              <article class="row" >
+                <figure class="col">
+                  <img src="media/aboutus1.jpg" alt="about us" >
+                </figure>
+                <article class="col text-dark rounded">
+                  <h2>About us</h2>
+                  <h6>Clarence Skincare are simply the best</h6>
+                  <br>
+                  <p class=" text-bg-dark p-3 rounded">According to cosmetic dermatologist Michele Green, MD, skin type is the most important factor in determining what skincare products will work best for you. "There are no bad products necessarily, but sometimes people with different skin types use the wrong product for their type of skin," Dr. Green says.
+                      <br>
+                     <br>
+                    People with acne-prone and sensitive skin need to be the most cautious with different ingredients in their skincare products. On the other hand, oily skin can handle a wider range of ingredients that sometimes trigger breakouts or irritation for other skin types.</p>
+                  <button class="m-3 btn btn-outline-dark">Contact Us</button>
+                </article>
+              </article>
+              <article class="row justify-content-center">
+                <div class="col-3 bg-gradient bg-danger rounded-3 p-3 m-3 text-light">
+                  <h2><span><i class="bi bi-phone"></i></span> CALL US</h2>
+                  <p class="ps-3"> + (234) 555 777</p>
+                  <p class="ps-3"> + (234) 444 898</p>
+                </div>
+                <div class="col-3 bg-gradient bg-danger rounded-3 p-3 m-3 text-light">
+                  <h2><span><i class="bi bi-geo-alt-fill"></i></span> LOCATION</h2>
+                  <p class="ps-3">121 Rock Sreet, 21 Avenue, Ikeja, Lagos 92103-9000</p>
+                </div>
+                <div class="col-3 bg-gradient bg-danger rounded-3 p-3 m-3 text-light">
+                  <h2><span><i class="bi bi-clock-fill"></i></span> HOURS</h2>
+                  <p class="ps-3">Mon – Fri …… 11 am – 8 pm, Sat, Sun  …… 6 am – 8 pm</p>
+                </div>
+              </article>
+            </section>
+        </section>
+        <!-- About us page End -->
+
+        
+    </main>
+    <!-- /////////////////////////////////////// -->
+    <!-- /////////////////////////////////////// -->
+
+
+
+    
+    <footer>
+        <div class="container">
+          <i class="fa fa-github" ></i>
+            <p class="float-right mb-1">
+              <a href="#">Back to top</a>
+            </p>
+            <p class="mb-1">Clarins Skincare &copy; 2022!</p>
+
+          </div>
+    </footer>
+    
+    <!-- Bootstrap Js Bundle -->
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</body>
+</html>
